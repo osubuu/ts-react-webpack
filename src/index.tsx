@@ -36,6 +36,12 @@ export default function App(): JSX.Element {
     setTodos(newTodos);
   };
 
+  const removeTodo = (index: number): void => {
+    const newTodos: Todo[] = [...todos];
+    newTodos.splice(index, 1);
+    setTodos(newTodos);
+  };
+
   return (
     <>
       <h1>Todo List</h1>
@@ -46,13 +52,20 @@ export default function App(): JSX.Element {
       <ul>
         {todos.map((todo: Todo, index: number) => (
           <li key={`item-${todo.text}`}>
-            <p>{todo.text}</p>
+            <span style={{ textDecoration: todo.complete ? 'line-through' : '' }}>{todo.text}</span>
             <button
               type="button"
               aria-label="Complete this todo item"
               onClick={(): void => completeTodo(index)}
             >
               {todo.complete ? 'Incomplete' : 'Complete'}
+            </button>
+            <button
+              type="button"
+              aria-label="Remove this todo item"
+              onClick={(): void => removeTodo(index)}
+            >
+              Remove item
             </button>
           </li>
         ))}
