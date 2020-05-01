@@ -23,5 +23,5 @@ module.exports = {
   devServer: {
     contentBase: './', // get content at this location
     port: 5000,
-  }
-}
+  },
+};
