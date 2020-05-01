@@ -14,7 +14,7 @@ interface Todo {
 
 export default function App(): JSX.Element {
   // hooks: [state property, function to update state property]
-  // value pased into useState() is the default value
+  // value passed into useState() is the default value
   // NOTE: hooks can only be used in function (stateless) components
   const [value, setValue] = useState<string>('');
   const [todos, setTodos] = useState<Todo[]>([]);
