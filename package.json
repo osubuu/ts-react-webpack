@@ -1,0 +1,8 @@
+{
+  "name": "typescript-react-webpack",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:osubuu/typescript-react-webpack.git",
+  "author": "<Khoi> <hakhoipham@gmail.com>",
+  "license": "MIT"
+}
